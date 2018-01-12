@@ -38,6 +38,18 @@ function handleEvent(event) {
     return Promise.resolve(null);
   }
 
+  if ( event.message.text == 'うるさい') {
+
+    // create a echoing text message
+    const echo = { type: 'text', text: "すみません。" };
+
+  } else {
+
+    // create a echoing text message
+    const echo = { type: 'text', text: event.message.text + "って言うんかい" };
+
+  }
+
   // create a echoing text message
   const echo = { type: 'text', text: event.message.text + "って言うんかい" };
 
