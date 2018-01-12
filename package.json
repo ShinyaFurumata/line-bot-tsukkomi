@@ -1,0 +1,15 @@
+{
+  "name": "line-bot-shin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "shinyafurumata",
+  "license": "ISC",
+  "dependencies": {
+    "@line/bot-sdk": "^5.2.0",
+    "express": "^4.16.2"
+  }
+}
