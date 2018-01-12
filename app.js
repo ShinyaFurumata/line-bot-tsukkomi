@@ -38,20 +38,15 @@ function handleEvent(event) {
     return Promise.resolve(null);
   }
 
-  if ( event.message.text == 'うるさい') {
-
+  // 「くっころ」という単語がテキストに含まれている場合のみ返事をする
+  if (req.body['events'][0]['message']['text'].indexOf('うるさい') == -1) {
     // create a echoing text message
-    const echo = { type: 'text', text: "すみません。" };
-
+    const echo = { type: 'text', text: "ごめんごめん" };
   } else {
-
     // create a echoing text message
     const echo = { type: 'text', text: event.message.text + "って言うんかい" };
-
   }
 
-  // create a echoing text message
-  const echo = { type: 'text', text: event.message.text + "って言うんかい" };
 
   // use reply API
   return client.replyMessage(event.replyToken, echo);
